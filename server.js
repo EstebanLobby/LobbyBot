@@ -13,6 +13,8 @@ app.use(cors());
 
 // 🚀 3. Importar rutas (después de inicializar `app`)
 const userRoutes = require("./routes/userRoutes");
+const whatsappRoutes = require("./routes/whatsappRoutes");
+app.use("/api/whatsapp", whatsappRoutes);
 app.use("/api/users", userRoutes);
 
 // 🚀 4. Conectar a MongoDB
